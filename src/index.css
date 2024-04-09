@@ -1,47 +1,109 @@
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Set base font size */
 :root {
   font-size: 62.5%;
 }
 
+/* Body styles */
 body {
   font-size: 1.6rem;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1B1D1E;
-  min-height: 100%;
-  color: white;
+  background: linear-gradient(45deg, #ff00ff, #800080, #ff0000); /* Gradient background */
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+/* Modal styles */
 .customModal {
-  background: #c22727;
+  background: linear-gradient(45deg, #f6b93b, #ee5253); /* Gradient background */
   max-width: 400px;
   width: 100%;
   padding: 2rem;
+  border-radius: 15px;
+  animation: fadeIn 0.5s ease; /* Fade-in animation */
+  filter: blur(10px); /* Glass effect */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Shadow */
 }
 
+/* Fade-in animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container styles */
 .container {
   display: flex;
-  padding: 4rem;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Shadow */
 }
 
+/* Heading styles */
 h2 {
-  border: 1px solid blue;
-  padding: 1rem 3rem;
-}
-
-form input, button {
+  border: 2px solid #fff;
   padding: 1rem 2rem;
-  font-size: 2rem;
+  border-radius: 10px;
+  font-size: 2.4rem;
+  animation: slideIn 0.5s ease; /* Slide-in animation */
 }
 
+/* Slide-in animation keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Form input and button styles */
+form input,
+button {
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Shadow */
+}
+
+/* Input hover/focus effect */
+form input:hover,
+form input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+/* Names container styles */
 .names-container {
   display: flex;
   justify-content: space-between;
@@ -50,55 +112,42 @@ form input, button {
   max-width: 700px;
 }
 
+/* Names paragraph styles */
 .names-container p {
-  border: 1px solid white;
+  border: 2px solid #fff;
   padding: 1rem 2rem;
-  align-items: center;
+  border-radius: 10px;
   display: flex;
   gap: 2rem;
 }
 
+/* Span inside paragraph styles */
 .names-container p span {
-  /* border: 1px solid white; */
   border-radius: 50%;
   padding: 1rem;
-  background-color: rgb(158, 40, 40);
+  background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
 }
 
-.buttons-container {
-  display: flex;
-  gap: 4rem;
-}
-
-button {
-  cursor: pointer;
-  
-}
-
-button:hover {
-  opacity: 0.8;
-}
-
-.first {
-  background-color: rgb(28, 128, 28);
-  border: none;
-  color: white;
-}
-
-.second {
-  background-color: #962424;
-  border: none;
-  color: white;
-}
-
+/* Image container styles */
 .image-container {
-  width: 400px;
+  width: 100%;
+  max-width: 400px;
   height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  animation: fadeIn 0.5s ease; /* Fade-in animation */
 }
 
+/* Image styles */
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Image hover effect */
+.image-container img:hover {
+  transform: scale(1.05);
 }
