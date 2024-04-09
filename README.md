@@ -7,4 +7,5 @@
 - **Random Selection**: Easily pick an item from a list at random.
 - **Local Storage**: Items are saved in local storage for persistence.
 - **GIF Support**: Enhance the experience with playful GIFs.
-![image](https://github.com/Goleo87/RandomPickerApp/assets/143517073/9acf3a18-48bd-476b-b7fe-0f58fbf012b7)
+  
+![image](https://github.com/Goleo87/Random-Picker-App/assets/143517073/368a108f-8295-4ba1-9c3c-4547ae330ab3)
